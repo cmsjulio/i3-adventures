@@ -14,6 +14,17 @@ set $term --no-startup-id terminator
 set $shutdown sudo -A shutdown -h now
 set $reboot sudo -A reboot
 
+# add compton for background transparency
+# precisa do compton instalado, fazer:
+# sudo apt-get -y install compton
+# we also need the compton.conf file, which is available in the current directory
+# see: https://www.reddit.com/r/i3wm/comments/6p40k5/transparency_not_working_in_terminator/
+exec --no-startup-id compton --config ~/.config/i3/compton.conf
+
+# mudando a image do desktop, precisa do feh instalado, fazer:
+# sudo apt-get install feh
+exec --no-startup-id feh --bg-scale --zoom fill ~/Pictures/background.jpg
+
 # #---Gaps---# #
 #gaps inner 15px
 #gaps outer 15px
@@ -147,11 +158,11 @@ bindsym $mod+x workspace number $ws2
 bindsym $mod+c workspace number $ws3
 bindsym $mod+v workspace number $ws4
 bindsym $mod+b workspace number $ws5
-bindsym $mod+6 workspace number $ws6
-bindsym $mod+7 workspace number $ws7
-bindsym $mod+8 workspace number $ws8
-bindsym $mod+9 workspace number $ws9
-bindsym $mod+0 workspace number $ws10
+bindsym $mod+n workspace number $ws6
+bindsym $mod+m workspace number $ws7
+bindsym $mod+comma workspace number $ws8
+bindsym $mod+period  workspace number $ws9
+bindsym $mod+semicolon workspace number $ws10
 
 # move focused container to workspace
 bindsym $mod+Shift+z move container to workspace number $ws1
@@ -159,11 +170,11 @@ bindsym $mod+Shift+x move container to workspace number $ws2
 bindsym $mod+Shift+c move container to workspace number $ws3
 bindsym $mod+Shift+v move container to workspace number $ws4
 bindsym $mod+Shift+b move container to workspace number $ws5
-bindsym $mod+Shift+6 move container to workspace number $ws6
-bindsym $mod+Shift+7 move container to workspace number $ws7
-bindsym $mod+Shift+8 move container to workspace number $ws8
-bindsym $mod+Shift+9 move container to workspace number $ws9
-bindsym $mod+Shift+0 move container to workspace number $ws10
+bindsym $mod+Shift+n move container to workspace number $ws6
+bindsym $mod+Shift+m move container to workspace number $ws7
+bindsym $mod+Shift+comma move container to workspace number $ws8
+bindsym $mod+Shift+period move container to workspace number $ws9
+bindsym $mod+Shift+semicolon move container to workspace number $ws10
 
 # reload the configuration file
 bindsym $mod+F5 reload
