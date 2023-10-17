@@ -27,6 +27,7 @@ exec --no-startup-id feh --bg-center ~/.config/i3/assets/background.jpg
 
 # teclado em português
 exec --no-startup-id setxkbmap -model abnt2 -layout br
+# pra escalar usar: exec --no-startup-id feh --bg-scale --zoom fill ~/Pictures/background.jpg
 # #---Gaps---# #
 #gaps inner 15px
 #gaps outer 15px
@@ -47,14 +48,14 @@ for_window [title="dropdown"] floating enable
 for_window [title="dropdown"] resize set 1200 600
 for_window [title="dropdown"] move scratchpad
 for_window [title="dropdown"] border pixel 5
-exec --no-startup-id $term --title dropdown -e tmux 
+#exec --no-startup-id $term --title dropdown -e tmux 
 
 #bindsym $mod+u			    [title="dropdown"] scratchpad show; [title="dropdown"] move position center
 #bindsym $mod+Shift+u		resize shrink height 10 px or 10 ppt
 
 
-for_window [class="explorer"] floating enable
-for_window [class="explorer"] resize set 1200 600
+for_window [class="explorer"] floating enable 
+for_window [class="explorer"] resize set 1900 1000
 for_window [class="explorer"] move scratchpad
 for_window [class="explorer"] border pixel 5
     exec_always --no-startup-id nautilus --class=explorer 
