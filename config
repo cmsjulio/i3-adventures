@@ -14,6 +14,10 @@ set $term --no-startup-id terminator
 set $shutdown sudo -A shutdown -h now
 set $reboot sudo -A reboot
 
+#disabling blanking screen
+exec xset -dpms;
+exec xset s off;
+
 # add compton for background transparency
 # precisa do compton instalado, fazer:
 # sudo apt-get -y install compton
