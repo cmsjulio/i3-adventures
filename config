@@ -15,8 +15,8 @@ set $shutdown sudo -A shutdown -h now
 set $reboot sudo -A reboot
 
 #disabling blanking screen
-exec xset -dpms;
-exec xset s off;
+exec --no-startup-id xset -dpms;
+exec --no-startup-id xset s off;
 
 # add compton for background transparency
 # precisa do compton instalado, fazer:
@@ -28,6 +28,7 @@ exec --no-startup-id compton --config ~/.config/i3/compton.conf
 # mudando a image do desktop, precisa do feh instalado, fazer:
 # sudo apt-get install feh
 exec --no-startup-id feh --bg-center ~/.config/i3/assets/background.jpg
+exec --no-startup-id dropbox start
 
 # teclado em português
 exec --no-startup-id setxkbmap -model abnt2 -layout br
@@ -41,6 +42,7 @@ bindsym $mod+Return 		exec $term
 bindsym --release Control+Shift+Print exec gnome-screenshot -i
 bindsym --release Print exec gnome-screenshot
 bindsym Control+MOD1+Delete exec gnome-control-center
+
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
