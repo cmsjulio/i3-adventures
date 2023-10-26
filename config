@@ -28,11 +28,12 @@ exec --no-startup-id compton --config ~/.config/i3/compton.conf
 # mudando a image do desktop, precisa do feh instalado, fazer:
 # sudo apt-get install feh
 exec --no-startup-id feh --bg-center ~/.config/i3/assets/background.jpg
+# pra escalar usar: exec --no-startup-id feh --bg-scale --zoom fill ~/Pictures/background.jpg
+
 exec --no-startup-id dropbox start
 
 # teclado em português
 exec --no-startup-id setxkbmap -model abnt2 -layout br
-# pra escalar usar: exec --no-startup-id feh --bg-scale --zoom fill ~/Pictures/background.jpg
 # #---Gaps---# #
 #gaps inner 15px
 #gaps outer 15px
