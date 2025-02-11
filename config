@@ -39,9 +39,12 @@ exec --no-startup-id setxkbmap -model abnt2 -layout br
 
 # #---Basic Bindings---# #
 bindsym $mod+Return 		exec $term
+# requires 'sudo apt install gnome-screenshot'
 bindsym --release Control+Shift+Print exec gnome-screenshot -i
 bindsym --release Print exec gnome-screenshot
-bindsym Control+MOD1+Delete exec gnome-control-center
+# bindsym Control+MOD1+Delete exec gnome-control-center
+# usar esse abaixo para funcionar no ubuntu 24.04
+bindsym Control+MOD1+Delete exec env XDG_CURRENT_DESKTOP=GNOME gnome-control-center --verbose
 
 
 # Font for window titles. Will also be used by the bar unless a different font
