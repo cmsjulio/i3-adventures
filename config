@@ -232,9 +232,14 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #audio config
-bindsym Control+Shift+Up exec --no-startup-id amixer -D pulse sset Master 5%+
-bindsym Control+Shift+Down exec --no-startup-id amixer -D pulse sset Master 5%-
-bindsym Control+$mod+m exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+# bindsym Control+Shift+Up exec --no-startup-id amixer -D pulse sset Master 5%+
+# bindsym Control+Shift+Down exec --no-startup-id amixer -D pulse sset Master 5%-
+
+bindsym Control+Shift+Up exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym Control+Shift+Down exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+#bindsym Control+Shift+m exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+
+bindsym Control+Shift+m exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 #polybar(must install) launching
 #exec_always --no-startup-id bash $HOME/.config/polybar/launch.sh
