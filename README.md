@@ -1,4 +1,4 @@
-## TODO
+## REQUIREMENTS for background & transparency
 
 ### dependencies:
 
@@ -16,3 +16,8 @@ on exec:
     open firefox on workspace 2
     open nautilus hidden on mod+u to get with max screen size
     
+ sudo apt-get -y install compton   
+ sudo apt-get install feh
+ sudo apt install terminator
+
+ adjust terminator profile>background>transparent background>shade background to 85%
