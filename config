@@ -48,6 +48,7 @@ bindsym $mod+Return 		exec $term
 # requires 'sudo apt install flameshot'
 bindsym --release Control+Shift+Print exec flameshot gui
 bindsym --release Print exec flameshot gui
+bindsym --release Control+Shift+space exec flameshot gui
 
 # bindsym Control+MOD1+Delete exec gnome-control-center
 # usar esse abaixo para funcionar no ubuntu 24.04
