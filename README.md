@@ -11,6 +11,9 @@ sudo apt-get install feh
 for using screenshot bindings
 sudo apt install gnome-screenshot
 
+for better screenshot bindings
+sudo apt install flameshot
+
 for terminal
 sudo apt install terminator
 

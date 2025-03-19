@@ -39,9 +39,16 @@ exec --no-startup-id setxkbmap -model abnt2 -layout br
 
 # #---Basic Bindings---# #
 bindsym $mod+Return 		exec $term
+## print using gnome-screenshot (old)
 # requires 'sudo apt install gnome-screenshot'
-bindsym --release Control+Shift+Print exec gnome-screenshot -i
-bindsym --release Print exec gnome-screenshot
+# bindsym --release Control+Shift+Print exec gnome-screenshot -i
+# bindsym --release Print exec gnome-screenshot
+
+## print using flameshot (better)
+# requires 'sudo apt install flameshot'
+bindsym --release Control+Shift+Print exec flameshot gui
+bindsym --release Print exec flameshot gui
+
 # bindsym Control+MOD1+Delete exec gnome-control-center
 # usar esse abaixo para funcionar no ubuntu 24.04
 bindsym Control+MOD1+Delete exec env XDG_CURRENT_DESKTOP=GNOME gnome-control-center --verbose
