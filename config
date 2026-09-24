@@ -45,6 +45,7 @@ exec --no-startup-id dropbox start
 
 
 # instalando sxhkd para leader shortcuts systemwide
+# precisar instalar o sxhkd com apt
 exec_always --no-startup-id sxhkd
 
 # teclado em português
